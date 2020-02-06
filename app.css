@@ -1,0 +1,110 @@
+#container{
+    background-color: white;
+    height:100%;
+    width:100%;
+    padding:0;
+    margin:0;
+}
+
+#left-column{
+    width:15%;
+    height:100%;
+    float:left;
+    background-color: white;
+}
+
+
+#content{
+    width:70%;
+    height:100%;
+    float:left;
+    background-color: white;
+}
+
+
+#right-column{
+    width:15%;
+    height:100%;
+    float:left;
+    background-color: white;
+}
+
+
+#canvas{
+    width:784px;
+    height:500px;
+    background-color: white;
+    border:solid 1px;
+}
+
+.colbutton{
+    height:50px;
+    line-height:50px;
+    width:80%;
+    font-size:1.3em;
+    background-color:lightgray;
+    margin:auto;
+    text-align:center;
+    vertical-align: middle;
+    margin-top:10px;
+    margin-bottom:10px;
+    font-family:Arial;
+    border-radius:25px;
+    user-select:None;
+    
+}
+
+.colbutton:hover{
+    background-color:whitesmoke;
+}
+
+.colbutton:active{
+    background-color:gray;
+}
+
+svg {
+    background-color: #FFF;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+svg:not(.active):not(.ctrl) {
+    cursor: crosshair;
+}
+path.link {
+    fill: none;
+    stroke: #000;
+    stroke-width: 4px;
+    cursor: default;
+}
+svg:not(.active):not(.ctrl) path.link {
+    cursor: pointer;
+}
+path.link.selected {
+    stroke-dasharray: 10, 2;
+}
+path.link.dragline {
+    pointer-events: none;
+}
+path.link.hidden {
+    stroke-width: 0;
+}
+circle.node {
+    stroke-width: 1.5px;
+    cursor: pointer;
+}
+circle.node.reflexive {
+    stroke: #000 !important;
+    stroke-width: 2.5px;
+}
+text {
+    font: 12px sans-serif;
+    pointer-events: none;
+}
+text.id {
+    text-anchor: middle;
+    font-weight: bold;
+}
